@@ -5,7 +5,7 @@
 #include<arpa/inet.h>
 #include<sys/socket.h>
 
-int prime(int num)
+int amst(int num)
 {
 	int d=0;int result=0;
 	while(num!=0)
@@ -65,7 +65,7 @@ int main(void)
   printf("error in recieving\n");
   	return -1;
   }
-  server_msg=prime(client_msg);
+  server_msg=amst(client_msg);
   
   printf("msg from client is %d\n",client_msg);
   if(send(client_sock,&server_msg,sizeof(server_msg),0)<0)
